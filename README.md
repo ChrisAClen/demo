@@ -1,4 +1,3 @@
 # demo
-mvc project
 
-patch-1 readme
+master readme
