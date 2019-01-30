@@ -1,3 +1,9 @@
 # demo
 
-master readme
+pivotal readme
+
+maintainers
+
++chris clendinen
+
+
