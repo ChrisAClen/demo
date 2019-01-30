@@ -1,3 +1,3 @@
 # demo
 
-master readme
+pivotal readme
