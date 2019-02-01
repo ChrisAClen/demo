@@ -11,7 +11,7 @@ pool:
 
 
 pr:
--	‘azure-pipelines’
+    -‘azure-pipelines’
 
 steps:
 	- script: ‘dotnet restore –project ./MovieNight/MovieNight.sln’
