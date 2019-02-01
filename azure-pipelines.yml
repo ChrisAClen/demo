@@ -14,8 +14,8 @@ pr:
     -‘azure-pipelines’
 
 steps:
-	- script: ‘dotnet restore –project ./Demo/Demo.sln’
-    - script: ‘dotnet build –project ./Demo/Demo.sln’
+	- script: 'dotnet restore ./Demo/Demo.sln'
+    - script: 'dotnet build ./Demo/Demo.sln'
     - task: ArchiveFiles@2
       inputs:
         rootFolderOrFile: '$(build.sourcesDirectory)'
