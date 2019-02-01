@@ -4,14 +4,20 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+    - master
 
 pool:
   vmImage: 'Ubuntu-16.04'
 
+
+pr:
+-	‘azure-pipelines’
+
 steps:
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(build.sourcesDirectory)'
-    includeRootFolder: false
-- task: PublishBuildArtifacts@1
+	- script: ‘dotnet restore –project ./MovieNight/MovieNight.sln’
+    - script: ‘dotnet build –project ./MovieNight/MovieNight.sln’
+    - task: ArchiveFiles@2
+      inputs:
+        rootFolderOrFile: '$(build.sourcesDirectory)'
+        includeRootFolder: false
+    - task: PublishBuildArtifacts@1
